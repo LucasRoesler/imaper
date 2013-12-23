@@ -37,15 +37,15 @@ IMAP made easy.
 
 ## Install
 
-### Install From PyPi
+### Install With Pip
 
-    pip install imaper
+    pip install git+https://github.com/jobdash/imaper.git
 
 ### Install From Git
 
 Clone the Repository:
 
-    $ git clone https://bitbucket.org/dhrrgn/imaper.git
+    $ git clone https://github.com/jobdash/imaper.git
 
 Install Requirements:
 
