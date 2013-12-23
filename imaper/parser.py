@@ -132,6 +132,7 @@ def parse_email(raw_email):
 
     parsed_email['sent_from'] = _get_mail_addresses(email_message, 'from')
     parsed_email['sent_to'] = _get_mail_addresses(email_message, 'to')
+    parsed_email['reply_to'] = _get_mail_addresses(email_message, 'reply-to')
 
     value_headers_keys = ['Subject', 'Date', 'Message-ID']
     key_value_header_keys = ['Received-SPF',
