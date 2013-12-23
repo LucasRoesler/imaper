@@ -151,4 +151,6 @@ def parse_email(raw_email):
             parsed_email['headers'].append({'Name': key,
                                             'Value': value})
 
+    parsed_email['as_string'] = email_message.as_string()
+
     return parsed_email
