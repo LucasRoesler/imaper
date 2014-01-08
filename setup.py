@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name="imaper",
-    version="1.0.0",
+    version="1.0.1",
     author="Dan Horrigan",
     author_email="dan@dhorrigan.com",
     url="https://bitbucket.org/dhrrgn/imaper",
