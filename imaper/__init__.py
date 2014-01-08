@@ -4,6 +4,7 @@ from .parser import parse_email
 __version__ = "1.0.0"
 __all__ = ['Imaper', 'Message']
 
+
 class Imaper:
     """Connects to the IMAP server with the given information.
 
@@ -37,6 +38,11 @@ class Imaper:
 
         if isinstance(self.folder, str):
             self.select_folder(self.folder)
+
+    def logout(self):
+        """Logout, returning the server respone.
+        """
+        return self.server.logout()
 
     def select_folder(self, folder):
         """Selects the given folder on the IMAP connection.  This is
