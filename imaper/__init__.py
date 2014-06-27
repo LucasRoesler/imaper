@@ -91,7 +91,10 @@ class Imaper:
         ])
 
         for msgid, data in response.iteritems():
-            email_object = parse_email(str(data[u'BODY[]']))
+            try:
+                email_object = parse_email(str(data[u'BODY[]']))
+            except UnicodeEncodeError:
+                email_object = parse_email(str(data[u'BODY[]'].encode('UTF-8')))
             email_object['msgid'] = msgid
             email_object['size'] = data[u'RFC822.SIZE']
             email_object['flags'] = data[u'FLAGS']
